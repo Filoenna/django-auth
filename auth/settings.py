@@ -142,7 +142,7 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-SITE_ID = 1
+SITE_ID = 2
 LOGIN_REDIRECT_URL = "/"
 
 # Provider specific settings
@@ -159,6 +159,9 @@ SOCIALACCOUNT_PROVIDERS = {
             "client_id": os.getenv("GOOGLE_CLIENT_ID"),
             "secret": os.getenv("GOOGLE_SECRET"),
             "key": "",
+        },
+        "AUTH_PARAMS": {
+            "access_type": "online",
         },
     }
 }
